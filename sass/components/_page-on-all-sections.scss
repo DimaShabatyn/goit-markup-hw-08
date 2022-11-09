@@ -5,6 +5,12 @@
 .section {
     padding: 94px 0;
 }
+.section.mobile-hidden {
+    @media screen and (max-width: 1199px) {
+        padding: 30px 0;
+    }
+}
+
 .section-color {
     background-color: $secondary-color-bg;
 }
@@ -23,4 +29,27 @@
 .position-list {
     display: flex;
     gap: 30px;
+
+    @media screen and (min-width: $tablet) {
+        flex-wrap: wrap;
+    }
+}
+.position-list.mobile-hidden {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+.section-title.mobile-hidden {
+    @media screen and (max-width: 1199px) {
+        position: absolute;
+        white-space: nowrap;
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        padding: 0;
+        margin: -1px;
+        clip-path: inset(50%);
+    }
 }

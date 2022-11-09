@@ -305,6 +305,12 @@ img {
   padding: 94px 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .section.mobile-hidden {
+    padding: 30px 0;
+  }
+}
+
 .section-color {
   background-color: #F5F4FA;
 }
@@ -327,6 +333,33 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+}
+@media screen and (min-width: 4) {
+  .position-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .position-list.mobile-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section-title.mobile-hidden {
+    position: absolute;
+    white-space: nowrap;
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding: 0;
+    margin: -1px;
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+  }
 }
 
 /* ----------!!!стилі Шапки!!!---------- */
