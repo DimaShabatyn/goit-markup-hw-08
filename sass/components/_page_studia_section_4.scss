@@ -1,0 +1,25 @@
+/* --- секція 4 --- */
+.client {
+    &__link {
+        display: flex;
+        border: 1px solid $border-client;
+        border-radius: 4px;
+        height: 92px;
+        min-width: 170px;
+        fill: $border-client;
+        justify-content: center;
+        align-items: center;
+    
+        transition-property: border-color, fill;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &:hover, &:focus {
+            border-color: $primary-color-text;
+            fill: $primary-color-text;
+        }
+    }
+    &__logo {
+        color: currentColor;
+    }
+}

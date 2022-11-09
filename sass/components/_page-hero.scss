@@ -1,0 +1,49 @@
+/* --- герой --- */
+.hero-overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: 
+    linear-gradient(to right, $overlay-color, $overlay-color),
+    url(../images/hero.jpg);
+    background-color: $hero-bg;
+    background-size: cover;
+}
+.hero {
+    max-width: 696px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 200px 15px;
+
+    &-title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $footer-color-text;
+        margin: 0px 0px 30px 0px;
+    }
+    &-button {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        text-align: center;
+        letter-spacing: 0.06em;
+        background-color: $primary-color-text;
+        color: $footer-color-text;
+    
+        padding: 10px 32px;
+        box-shadow: $shadow-main-button;
+    
+        transition-property: background-color;
+        transition-duration: time-250;
+        transition-timing-function: $transition-bezier;
+    
+        &:hover, &:focus {
+            background-color: $active-button;
+        }
+    }
+}

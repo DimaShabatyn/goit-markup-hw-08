@@ -1,0 +1,32 @@
+// visually-hidden
+.advantages {
+    &-box {
+        display: flex;
+        background-color: $secondary-color-bg;
+        width: 270px;
+        height: 120px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    &-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $main-color-text;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    &-paragraph {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: $secondary-color-text;
+        max-width: 270px;
+    }
+}

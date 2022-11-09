@@ -1,0 +1,149 @@
+.footer {
+    background-color: $footer-color-bg;
+    padding: 60px 0;
+
+    &-position {
+    display: flex;
+    gap: 93px;
+    align-items: baseline;
+    }
+}
+
+/* --- Блок 1 ---*/
+.footer-logo {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $footer-color-text;
+    margin-bottom: 20px;
+
+        &__color {
+            color: $primary-color-text;
+        }
+}
+.footer-contacts {
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    &__link {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        
+        transition-property: color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &--color1 {
+            color: $footer-color-text;
+        }
+        &--color2 {
+            color: $kontakty-footer; 
+        }
+        &:hover, &:focus {
+            color: $primary-color-text;
+        }
+    }       
+}
+
+/* --- Блок 2 ---*/
+.footer-title {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $footer-color-text;
+    margin-bottom: 20px;
+}
+.footer-socialnet {
+    display: flex;
+    gap: 10px;
+
+    &__link {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        background-color: $footer-socsolid-main;
+        fill: $footer-color-text;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+    
+        transition-property: background-color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &:hover, &:focus {
+            background-color: $primary-color-text;
+        }
+    }
+}
+
+/* --- Блок 3 ---*/
+.footer-form {
+    &__input {
+        padding: 15px 16px;
+        width: 358px;
+        height: 50px;
+        border-radius: 4px;
+        border: 1px solid $input-footer;
+        background-color: $footer-color-bg;
+        color: $footer-color-text;
+        box-shadow: $shadow-main-button;
+        outline: none;
+        
+        transition-property: border-color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+    
+        &::placeholder {
+            color: $kontakty-footer;
+        }
+        &:focus {
+            border-color: $primary-color-text;
+        }
+    }
+    
+    &__button {
+        position: relative;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        align-items: center;
+        text-align: left;
+        letter-spacing: 0.06em;
+        color: $footer-color-text;
+    
+        background-color: $primary-color-text;
+        border-radius: 4px;
+        padding: 10px 28px;
+        cursor: pointer;
+        border: transparent;
+        box-shadow: $shadow-main-button;
+        width: 200px;
+        margin-left: 9px;
+    
+        transition-property: background-color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+    
+        &:hover, &:focus {
+            background-color: $active-button;
+        }
+    }
+    
+    &__logo {
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+    }    
+}

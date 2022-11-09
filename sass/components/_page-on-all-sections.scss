@@ -1,0 +1,26 @@
+/* --- загальні на всі секції --- */
+.section-withoutname {
+    padding-top: 94px;
+}
+.section {
+    padding: 94px 0;
+}
+.section-color {
+    background-color: $secondary-color-bg;
+}
+.section-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $main-color-text;
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding: 0;
+}
+.position-list {
+    display: flex;
+    gap: 30px;
+}

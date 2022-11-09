@@ -1,0 +1,57 @@
+/* --- секція 3 --- */
+.socialnet-card {
+    background-color: $main-color-bg;
+    border-radius: 0 0 4px 4px;
+    box-shadow: $shadow-card-solid;
+
+    .socialnet {
+        padding: 30px 0;
+    
+        &-name {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.19;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $main-color-text;
+            margin-bottom: 10px;
+        }
+        &-subname {
+            font-size: 16px;
+            line-height: 1.19;
+            text-align: center;
+            letter-spacing: 0.03em;
+            color: $secondary-color-text;
+            margin-bottom: 16px;
+        }
+        
+        &__list {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        &__link {
+            display: flex;
+            width: 44px;
+            height: 44px;
+            background-color: $footer-socsolid-main;
+            border-radius: 50%;
+            fill: $border-client;
+            justify-content: center;
+            align-items: center;
+        
+            transition-property: background-color, fill;
+            transition-duration: $time-250;
+            transition-timing-function: $transition-bezier;
+    
+            &:hover, &:focus {
+                background-color: $primary-color-text;
+                fill: $footer-color-text;
+            }
+        }
+        &__logo {
+            color: currentColor;
+        } 
+    }
+}

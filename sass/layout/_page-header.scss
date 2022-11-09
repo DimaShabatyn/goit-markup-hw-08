@@ -1,0 +1,103 @@
+/* ----------!!!стилі Шапки!!!---------- */
+.header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $line-header;
+    
+    &-spacebetween {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-nav {
+        display: flex;
+        align-items: center;
+    }
+    &-logo {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+        color: $logo-color-text;
+        margin-right: 93px;
+
+        &__color {
+            color: $primary-color-text;
+        }
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    &-menu__item {
+        display: block;
+        position: relative; 
+    }
+    &-menu__link {
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        transition-property: color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        color: $main-color-text;
+        
+        &:hover, &:focus {
+            color: $primary-color-text;
+        }
+        &--current {
+            color: $primary-color-text;
+        }
+        &--current::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: $primary-color-text;
+            border-radius: 2px;
+            bottom: -1px;
+        }
+    }
+    .header-contacts {
+        display: flex;
+        gap: 30px;
+
+        &__link {
+            display: flex;
+            align-items: center;
+            padding: 32px 0;
+
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+
+            color: $secondary-color-text;
+            fill: $secondary-color-text;
+        }
+        &__link:hover, &__link:focus {
+            color: $primary-color-text;
+            fill: $primary-color-text;
+        }
+        &__logo {
+            fill: currentColor;
+            margin-right: 10px;
+
+            transition-property: fill;
+            transition-duration: $time-250;
+            transition-timing-function: $transition-bezier;
+        }
+    }   
+}

@@ -1,0 +1,251 @@
+/* ----------!!!стилі Модального вікна!!!---------- */
+
+/* --- Темний фон --- */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $backdrop-color;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity $time-250 $transition-bezier, visibility $time-250 $transition-bezier;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* --- Модальне вікно --- */
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $time-250 $transition-bezier;
+
+    min-width: 528px;
+    min-height: 581px;
+    border-radius: 4px;
+    padding: 40px;
+
+    background-color: $modal-bg-color;
+    box-shadow: $shadow-card-solid;
+}
+.backdrop.is-hidden .modal-window {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* --- Кнопка закриття модального вікна --- */
+.modal-closebutton {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid $border-btn;
+    background-color: transparent;
+
+    &__img {
+        display: block;
+        fill: $logo-color-text;
+    
+        transition-property: fill;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+    }
+
+    &:hover &__img, 
+    &:focus &__img {
+        fill: $primary-color-text;
+    }
+}
+
+/* --- Заголовок модального вікна --- */
+.modal-window__name {
+    display: block;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $main-color-text;
+}
+
+/* --- Форма модального вікна --- */
+.modal-form {
+    margin-top: 12px;
+    display: block;
+
+    &__field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &--text {
+            margin-bottom: 10px;
+        }
+        &--textarea {
+            margin-bottom: 20px;
+        }
+        &--check {
+            margin-top: 20px;
+
+            position: absolute;
+            white-space: nowrap;
+            height: 1px;
+            width: 1px;
+            border: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            padding: 0;
+            margin: -1px;
+            clip-path: inset(50%);
+        }
+    }
+    
+    &__label {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+
+        &--check {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+            color: $secondary-color-text;
+        }
+    }
+    &__input {
+        display: block;
+        width: 448px;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid $input-modal;
+        padding: 14px 16px 14px 42px;
+        outline: none;
+    
+        transition-property: border-color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &:focus {
+            border-color: $primary-color-text;
+        }
+    }
+    
+    &__logo {
+        position: absolute;
+        top: calc(8px + 50%);
+        left: 15px;
+        transform: translateY(-50%);
+        fill: $main-color-text;
+    
+        transition-property: fill;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &--check {
+            display: inline-block; 
+            margin-left: 12px;
+            margin-right: 8px;
+            background-color: $footer-color-text;
+            border: 2px solid $main-color-text;
+            border-radius: 2px;
+            cursor: pointer;
+        
+            transition-property: background-color;
+            transition-duration: $time-250;
+            transition-timing-function: $transition-bezier;
+        }
+    }
+    &__input:focus + &__logo {
+        fill: $primary-color-text;
+    }
+    
+    /* --- Поле для коментаря --- */
+    &__textarea {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+    
+        height: 120px;
+        resize: none;
+        border-radius: 4px;
+        border: 1px solid $input-modal;
+        padding: 12px 16px;
+        outline: none;
+    
+        transition-property: border-color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &:focus {
+            border-color: $primary-color-text;
+        }
+
+        &::placeholder {
+            color: $textarea-modal;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+        }
+    }
+    
+    /* --- Підтвердження форми --- */
+    &__field--check:checked + &__logo--check {
+        display: inline-block;
+        margin-left: 12px;
+        margin-right: 8px;
+        background-color: $primary-color-text;
+        border-radius: 2px;
+        border-color: $primary-color-text;
+    }
+    &__link {
+        color: $primary-color-text;
+        text-decoration: underline 1px;
+    }
+    
+    /* --- Кнопка форми модального вікна --- */
+    &__button {
+        display: block;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 1.88;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        padding: 0;
+    
+        width: 200px;
+        height: 50px;
+        background-color: $primary-color-text;
+        border-radius: 4px;
+        box-shadow: $shadow-main-button;
+        color: $footer-color-text;
+        border-color: transparent;
+    
+        transition-property: background-color;
+        transition-duration: $time-250;
+        transition-timing-function: $transition-bezier;
+
+        &:hover, &:focus {
+            background-color: $active-button;
+            cursor: pointer;
+        }
+    }
+}
