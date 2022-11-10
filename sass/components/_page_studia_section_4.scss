@@ -1,11 +1,9 @@
 /* --- секція 4 --- */
 .client {
     &__link {
-        display: flex;
         border: 1px solid $border-client;
         border-radius: 4px;
         height: 92px;
-        min-width: 170px;
         fill: $border-client;
         justify-content: center;
         align-items: center;
@@ -17,6 +15,17 @@
         &:hover, &:focus {
             border-color: $primary-color-text;
             fill: $primary-color-text;
+        }
+        
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            min-width: 226px;
+        }
+        @media screen and (min-width: $desktop) {
+            min-width: 170px;
         }
     }
     &__logo {
