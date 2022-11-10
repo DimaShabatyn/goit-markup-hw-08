@@ -3,14 +3,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-
-    &-item {
-        flex-basis: calc((100% - 60px) / 3);
+    
+    &-item { 
+        flex-basis: calc((100% - 60px) / 3); 
 
         &:nth-child(3n) {
             margin-right: 0;
         }
     }
+
     &-box__link {
         display: block;
         position: relative;

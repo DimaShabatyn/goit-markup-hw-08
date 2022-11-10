@@ -4,6 +4,20 @@
     border-radius: 0 0 4px 4px;
     box-shadow: $shadow-card-solid;
 
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+        height: 622px;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+        height: 536px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+        height: 428px;
+    }
+    
+
     .socialnet {
         padding: 30px 0;
     
