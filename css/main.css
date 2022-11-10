@@ -283,9 +283,23 @@ img {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .hero-button,
@@ -328,15 +342,22 @@ img {
   padding: 0;
 }
 
-.position-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-@media screen and (min-width: 4) {
+@media screen and (max-width: 767) {
   .position-list {
-    display: none;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .position-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -547,11 +568,7 @@ img {
 }
 
 .advantages-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #F5F4FA;
-  width: 270px;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -561,6 +578,34 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 480px) {
+  .advantages-box {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 270px;
+  }
 }
 .advantages-title {
   font-style: normal;
@@ -579,7 +624,26 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-  max-width: 270px;
+}
+@media screen and (min-width: 480px) {
+  .advantages-paragraph {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages-paragraph {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages-paragraph {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 270px;
+  }
 }
 
 /* --- секція 2 --- */
