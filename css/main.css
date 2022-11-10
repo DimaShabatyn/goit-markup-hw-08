@@ -316,6 +316,11 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 60px 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .section {
     padding: 60px 0;
@@ -354,9 +359,17 @@ img {
   padding: 0;
 }
 
-@media screen and (max-width: 767) {
+@media screen and (min-width: 480px) {
   .position-list {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -390,22 +403,6 @@ img {
   .position-list.mobile-hidden {
     display: none;
     padding: 0;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .section-title.mobile-hidden-null {
-    position: absolute;
-    white-space: nowrap;
-    height: 1px;
-    width: 1px;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    padding: 0;
-    margin: -1px;
-    -webkit-clip-path: inset(50%);
-            clip-path: inset(50%);
   }
 }
 
@@ -631,9 +628,8 @@ img {
 @media screen and (min-width: 480px) {
   .advantages-box {
     display: block;
-    margin-right: auto;
-    margin-left: auto;
     width: 450px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -668,6 +664,16 @@ img {
   margin-top: 0;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 480px) {
+  .advantages-title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages-title {
+    text-align: left;
+  }
+}
 .advantages-paragraph {
   font-size: 14px;
   line-height: 1.71;
@@ -678,6 +684,7 @@ img {
   .advantages-paragraph {
     margin-right: auto;
     margin-left: auto;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -737,11 +744,17 @@ img {
     width: 450px;
     height: 622px;
   }
+  .socialnet-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .socialnet-card {
     width: 354px;
     height: 536px;
+  }
+  .socialnet-card:not(:last-child) {
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -835,7 +848,10 @@ img {
 }
 @media screen and (max-width: 767px) {
   .client__link {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 210px;
   }
 }
 @media screen and (min-width: 768px) {

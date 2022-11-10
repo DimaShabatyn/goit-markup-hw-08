@@ -7,10 +7,16 @@
     @media screen and (min-width: $mobile) {
         width: 450px;
         height: 622px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
     }
     @media screen and (min-width: $tablet) {
         width: 354px;
         height: 536px;
+        &:not(:last-child) {
+        margin-bottom: 0px;
+        }
     }
     @media screen and (min-width: $desktop) {
         width: 270px;

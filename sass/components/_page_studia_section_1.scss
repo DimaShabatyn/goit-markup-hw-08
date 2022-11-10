@@ -11,10 +11,9 @@
         align-items: center;
 
         @media screen and (min-width: $mobile) {
-           display: block;
-            margin-right: auto;
-            margin-left: auto;
+            display: block;
             width: 450px;
+            text-align: center;
         }
         @media screen and (min-width: $tablet) {
             display: flex;
@@ -42,9 +41,12 @@
         margin-bottom: 10px;
 
         @media screen and (min-width: $mobile) {
-            
+            text-align: center;    
         }
-    }    
+        @media screen and (min-width: $tablet) {
+        text-align: left;    
+        }
+    } 
     &-paragraph {
         font-size: 14px;
         line-height: 1.71;
@@ -53,7 +55,8 @@
 
         @media screen and (min-width: $mobile) {
             margin-right: auto;
-            margin-left: auto;    
+            margin-left: auto;
+            max-width: 450px;    
         }
         @media screen and (min-width: $tablet) {
             margin-right: auto;
