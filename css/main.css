@@ -303,6 +303,12 @@ img {
 }
 
 /* --- загальні на всі секції --- */
+@media screen and (min-width: 480px) {
+  .section-withoutname {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) {
   .section-withoutname {
     padding-top: 60px;
@@ -627,7 +633,9 @@ img {
 }
 @media screen and (min-width: 480px) {
   .advantages-box {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 450px;
     text-align: center;
   }
@@ -1171,10 +1179,33 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+}
+@media screen and (min-width: 480px) {
+  .filtr {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 40px;
+    row-gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filtr {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+    row-gap: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filtr {
+    margin-bottom: 50px;
+  }
 }
 .filtr__button {
   font-style: normal;
@@ -1218,12 +1249,23 @@ img {
       flex-wrap: wrap;
   gap: 30px;
 }
-.products-item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+@media screen and (min-width: 768px) {
+  .products-item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+  }
+  .products-item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
-.products-item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .products-item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+  }
+  .products-item:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 .products-box__link {
   display: block;
@@ -1236,6 +1278,21 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .products-box__link {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-box__link {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-box__link {
+    width: 370px;
+  }
 }
 .products-box__link:hover, .products-box__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1251,17 +1308,22 @@ img {
   position: relative;
   overflow: hidden;
 }
+@media screen and (min-width: 480px) {
+  .products-box__thumb img {
+    width: 450px;
+    height: 294px;
+  }
+}
 .products-box__text {
   display: block;
   position: absolute;
   background-color: rgba(33, 150, 243, 0.9);
-  width: 370px;
+  width: 450px;
   height: 294px;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #FFFFFF;
-  padding: 63px 24px;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition-property: -webkit-transform;
@@ -1272,6 +1334,24 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .products-box__text {
+    width: 450px;
+    padding: 77px 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-box__text {
+    width: 354px;
+    padding: 49px 24px 77px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products-box__text {
+    width: 370px;
+    padding: 63px 24px;
+  }
 }
 .products-box__name {
   padding: 20px 24px;
@@ -1300,17 +1380,52 @@ img {
   background-color: #2F303A;
   padding: 60px 0;
 }
-.footer-position {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 93px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .footer-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 93px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 60px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 /* --- Блок 1 ---*/
+@media screen and (min-width: 480px) {
+  .footer-one {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-one {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-one {
+    text-align: left;
+  }
+}
+
 .footer-logo {
   display: inline-block;
   font-family: "Raleway", sans-serif;
@@ -1352,6 +1467,24 @@ img {
 }
 
 /* --- Блок 2 ---*/
+@media screen and (min-width: 480px) {
+  .footer-two {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-two {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-two {
+    text-align: left;
+  }
+}
+
 .footer-title {
   display: block;
   font-weight: 700;
@@ -1368,6 +1501,13 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+}
+@media screen and (min-width: 480px) {
+  .footer-socialnet {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .footer-socialnet__link {
   display: -webkit-box;
@@ -1396,9 +1536,24 @@ img {
 }
 
 /* --- Блок 3 ---*/
+@media screen and (min-width: 480px) {
+  .footer-three {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-three {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-three {
+    text-align: left;
+  }
+}
+
 .footer-form__input {
   padding: 15px 16px;
-  width: 358px;
   height: 50px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1431,6 +1586,26 @@ img {
 }
 .footer-form__input:focus {
   border-color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .footer-form__input {
+    display: block;
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-form__input {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    display: inline;
+    margin-bottom: 0px;
+    width: 358px;
+  }
 }
 .footer-form__button {
   position: relative;

@@ -1,5 +1,9 @@
 /* --- загальні на всі секції --- */
 .section-withoutname {
+    @media screen and (min-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;  
+    }
     @media screen and (min-width: $tablet) {
         padding-top: 60px;
         padding-bottom: 60px;  

@@ -2,8 +2,22 @@
 .filtr {
     display: flex;
     gap: 8px;
-    justify-content: center;
-    margin-bottom: 50px;
+
+    @media screen and (min-width: $mobile) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        row-gap: 15px;
+    }
+    @media screen and (min-width: $tablet) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        row-gap: 0;
+    }
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 50px;
+    }
 
     &__button {
         font-style: normal;
