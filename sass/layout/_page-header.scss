@@ -23,6 +23,13 @@
         color: $logo-color-text;
         margin-right: 93px;
 
+        @media screen and (min-width: $tablet) {
+            margin-right: 88px;
+        }
+        @media screen and (min-width: $desktop) {
+            margin-right: 93px;
+        }
+
         &__color {
             color: $primary-color-text;
         }
@@ -71,14 +78,17 @@
         }
     }
     .header-contacts {
-        display: flex;
-        gap: 30px;
+        
+        @media screen and (min-width: $tablet) {
+            display: block;
+            gap: 30px;
+        }
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            gap: 30px;
+        }
 
         &__link {
-            display: flex;
-            align-items: center;
-            padding: 32px 0;
-
             font-weight: 500;
             font-size: 14px;
             line-height: 1.14;
@@ -86,7 +96,22 @@
 
             color: $secondary-color-text;
             fill: $secondary-color-text;
+            
+            @media screen and (min-width: $tablet) {
+                display: block;
+            }
+            @media screen and (min-width: $desktop) {
+                display: flex;
+                align-items: center;
+                padding: 32px 0;
+            }
         }
+        &__link.contact-dist {
+            @media screen and (min-width: $tablet) {
+                padding-bottom: 10px;
+            }
+        }
+        
         &__link:hover, &__link:focus {
             color: $primary-color-text;
             fill: $primary-color-text;
