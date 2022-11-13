@@ -13,6 +13,26 @@
         display: flex;
         align-items: center;
     }
+    .header-nav__button {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        fill: $main-color-text;
+
+        .header-nav__button .header-nav__icon-close {
+            display: none;
+        }
+        .header-nav__button.is-open .header-nav__icon-close {
+            display: block;
+        }
+        .header-nav__button.is-open .header-nav__icon-menu {
+            display: none;
+        }
+    }
+    
+    
     &-logo {
         font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -81,7 +101,6 @@
         
         @media screen and (min-width: $tablet) {
             display: block;
-            gap: 30px;
         }
         @media screen and (min-width: $desktop) {
             display: flex;
@@ -124,5 +143,18 @@
             transition-duration: $time-250;
             transition-timing-function: $transition-bezier;
         }
-    }   
+    }
+    
+    .header-nav__button {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        fill: $main-color-text;
+
+        .header-nav__icon-cross {
+            display: none;
+        }
+    }
 }
