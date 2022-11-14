@@ -3,158 +3,204 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: $line-header;
-    
-    &-spacebetween {
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.header-container {
+    @media screen and (min-width: $mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+    @media screen and (min-width: $desktop) {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    &-nav {
+    
+}
+.menu {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 90px;
+        width: 100vw;
+    }
+}
+.menu .nav {
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }   
+}
+    
+.menu__button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: $main-color-text;
+}
+.menu__button .icon-close {
+    @media screen and (min-width: $mobile) {
+        display: none;
+    } 
+}
+.menu__button.is-open .icon-close {
+    @media screen and (min-width: $mobile) {
+        display: block;
+    }
+}
+.menu__button.is-open .icon-menu {
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+}
+        
+.header-logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: $logo-color-text;
+
+    @media screen and (min-width: $mobile) {
+        padding: 16px 0;
+    }
+
+    &__color {
+        color: $primary-color-text;
+    }
+}
+
+.nav {
+    @media screen and (min-width: $tablet) {
+        margin-right: 96px;
+    }
+    @media screen and (min-width: $tablet) {
+        margin-right: 0;
+    }
+}
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.site-nav__item {
+    display: block;
+    position: relative; 
+}
+.site-nav__link {
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition-property: color;
+    transition-duration: $time-250;
+    transition-timing-function: $transition-bezier;
+
+    color: $main-color-text;
+    
+    &:hover, &:focus {
+        color: $primary-color-text;
+    }
+    &--current {
+        color: $primary-color-text;
+    }
+    &--current::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $primary-color-text;
+        border-radius: 2px;
+        bottom: -1px;
+    }
+}
+.menu-contacts {
+    
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
     }
-    .header-nav__button {
-        display: inline-flex;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        border: none;
-        fill: $main-color-text;
-
-        .header-nav__button .header-nav__icon-close {
-            display: none;
-        }
-        .header-nav__button.is-open .header-nav__icon-close {
-            display: block;
-        }
-        .header-nav__button.is-open .header-nav__icon-menu {
-            display: none;
-        }
+}
+.contacts {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        gap: 30px;
     }
-    
-    
-    &-logo {
-        font-family: 'Raleway', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        color: $logo-color-text;
-        margin-right: 93px;
+}
+.contacts__item:first-child {
+    margin-bottom: 10px;
+}
 
-        @media screen and (min-width: $tablet) {
-            margin-right: 88px;
-        }
-        @media screen and (min-width: $desktop) {
-            margin-right: 93px;
-        }
+.contacts__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-        &__color {
-            color: $primary-color-text;
-        }
+    color: $secondary-color-text;
+    fill: $secondary-color-text;
+    
+    @media screen and (min-width: $tablet) {
+        display: flex;
     }
-
-    &-menu {
+    @media screen and (min-width: $desktop) {
         display: flex;
         align-items: center;
-        gap: 50px;
     }
-    &-menu__item {
-        display: block;
-        position: relative; 
+}
+
+
+.contacts__link:hover, .contacts__link:focus {
+    color: $primary-color-text;
+    fill: $primary-color-text;
+}
+.contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+
+    transition-property: fill;
+    transition-duration: $time-250;
+    transition-timing-function: $transition-bezier;
+}
+
+
+.menu__button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: $main-color-text;
+
+    @media screen and (min-width: $mobile) {
+        display: flex;
     }
-    &-menu__link {
-        display: block;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        padding-top: 32px;
-        padding-bottom: 32px;
-
-        transition-property: color;
-        transition-duration: $time-250;
-        transition-timing-function: $transition-bezier;
-
-        color: $main-color-text;
-        
-        &:hover, &:focus {
-            color: $primary-color-text;
-        }
-        &--current {
-            color: $primary-color-text;
-        }
-        &--current::after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 4px;
-            background-color: $primary-color-text;
-            border-radius: 2px;
-            bottom: -1px;
-        }
-    }
-    .header-contacts {
-        
-        @media screen and (min-width: $tablet) {
-            display: block;
-        }
-        @media screen and (min-width: $desktop) {
-            display: flex;
-            gap: 30px;
-        }
-
-        &__link {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.14;
-            letter-spacing: 0.02em;
-
-            color: $secondary-color-text;
-            fill: $secondary-color-text;
-            
-            @media screen and (min-width: $tablet) {
-                display: block;
-            }
-            @media screen and (min-width: $desktop) {
-                display: flex;
-                align-items: center;
-                padding: 32px 0;
-            }
-        }
-        &__link.contact-dist {
-            @media screen and (min-width: $tablet) {
-                padding-bottom: 10px;
-            }
-        }
-        
-        &__link:hover, &__link:focus {
-            color: $primary-color-text;
-            fill: $primary-color-text;
-        }
-        &__logo {
-            fill: currentColor;
-            margin-right: 10px;
-
-            transition-property: fill;
-            transition-duration: $time-250;
-            transition-timing-function: $transition-bezier;
-        }
-    }
-    
-    .header-nav__button {
-        display: inline-flex;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        border: none;
-        fill: $main-color-text;
-
-        .header-nav__icon-cross {
-            display: none;
-        }
+    @media screen and (min-width: $tablet) {
+        display: none;
     }
 }
