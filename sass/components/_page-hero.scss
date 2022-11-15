@@ -10,20 +10,33 @@
     background-size: cover;
 }
 .hero {
-    max-width: 696px;
     margin: 0 auto;
     text-align: center;
     padding: 200px 15px;
 
+    @media screen and (min-width: $mobile) {
+        max-width: 390px;
+    }
+    @media screen and (min-width: $desktop) {
+        max-width: 696px;
+    }
+
     &-title {
         font-style: normal;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $footer-color-text;
         margin: 0px 0px 30px 0px;
+
+        @media screen and (min-width: $mobile) {
+            font-size: 26px;
+            line-height: 1.62;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 44px;
+            line-height: 1.36;
+        }
     }
     &-button {
         font-style: normal;

@@ -5,25 +5,29 @@
     gap: 30px;
     
     &-item { 
+        display: flex;
+        
         @media screen and (min-width: $tablet) {
             flex-basis: calc((100% - 60px) / 2); 
 
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
         }
         @media screen and (min-width: $desktop) {
             flex-basis: calc((100% - 90px) / 3); 
 
-        &:nth-child(3n) {
-            margin-right: 0;
-        }
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
         }  
     }
 
     &-box__link {
-        display: block;
+        display: flex;
         position: relative;
+        flex-direction: column;
+        height: 100%;
     
         transition-property: box-shadow;
         transition-duration: $time-250;
@@ -102,6 +106,7 @@
             border-left: 1px solid $work-list;
             border-bottom: 1px solid $work-list;
             border-right: 1px solid $work-list;
+            flex-grow: 1;
         }
         &__title {
             font-style: normal;
