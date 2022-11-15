@@ -3,11 +3,6 @@
     padding: 60px 0;
 
     &-position {
-        @media screen and (min-width: $desktop) {
-            display: flex;
-            gap: 93px;
-            align-items: baseline; 
-        }
         @media screen and (min-width: $tablet) {
             display: flex;
             gap: 60px;
@@ -15,13 +10,17 @@
             flex-wrap:wrap;
             align-items: baseline; 
         }
-    
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            gap: 93px;
+            align-items: baseline; 
+        } 
     }
 }
 
 /* --- Блок 1 ---*/
 .footer-one {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         text-align: center;
         margin-bottom: 60px;
     }
@@ -76,7 +75,7 @@
 
 /* --- Блок 2 ---*/
 .footer-two {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         text-align: center;
         margin-bottom: 60px;
     }
@@ -102,7 +101,7 @@
     display: flex;
     gap: 10px;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         justify-content: center;
     }
 
@@ -128,7 +127,7 @@
 
 /* --- Блок 3 ---*/
 .footer-three {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         text-align: center;
     }
     @media screen and (min-width: $tablet) {
@@ -160,14 +159,15 @@
             border-color: $primary-color-text;
         }
 
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: $mobile), (max-width: $mobile) {
             display: block;
             margin-bottom: 20px;
-            width: 450px;
+            width: 100%;
         }
          @media screen and (min-width: $tablet) {
             display: block;
             margin-bottom: 20px;
+            width: 450px;
         }
         @media screen and (min-width: $desktop) {
             display: inline;

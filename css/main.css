@@ -1823,17 +1823,6 @@ img {
   background-color: #2F303A;
   padding: 60px 0;
 }
-@media screen and (min-width: 1200px) {
-  .footer-position {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 93px;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-}
 @media screen and (min-width: 768px) {
   .footer-position {
     display: -webkit-box;
@@ -1849,9 +1838,20 @@ img {
             align-items: baseline;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer-position {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 93px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
 
 /* --- Блок 1 ---*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .footer-one {
     text-align: center;
     margin-bottom: 60px;
@@ -1910,7 +1910,7 @@ img {
 }
 
 /* --- Блок 2 ---*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .footer-two {
     text-align: center;
     margin-bottom: 60px;
@@ -1945,7 +1945,7 @@ img {
   display: flex;
   gap: 10px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .footer-socialnet {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1979,7 +1979,7 @@ img {
 }
 
 /* --- Блок 3 ---*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .footer-three {
     text-align: center;
   }
@@ -2030,17 +2030,18 @@ img {
 .footer-form__input:focus {
   border-color: #2196F3;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .footer-form__input {
     display: block;
     margin-bottom: 20px;
-    width: 450px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .footer-form__input {
     display: block;
     margin-bottom: 20px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
