@@ -279,8 +279,7 @@ ul, ol {
 
 img {
   display: block;
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
 }
 
 .container {
@@ -366,7 +365,7 @@ img {
   padding: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .position-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -975,12 +974,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .advantages-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 450px;
+    width: 100%;
     text-align: center;
   }
 }
@@ -991,7 +990,7 @@ img {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    width: 354px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1001,7 +1000,7 @@ img {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    width: 270px;
+    width: 100%;
   }
 }
 .advantages-title {
@@ -1016,7 +1015,7 @@ img {
   margin-top: 0;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .advantages-title {
     text-align: center;
   }
@@ -1032,7 +1031,7 @@ img {
   letter-spacing: 0.03em;
   color: #757575;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .advantages-paragraph {
     margin-right: auto;
     margin-left: auto;
@@ -1091,28 +1090,22 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .socialnet-card {
     width: 450px;
-    height: 622px;
-  }
-  .socialnet-card:not(:last-child) {
-    margin-bottom: 30px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .socialnet-card {
     width: 354px;
-    height: 536px;
-  }
-  .socialnet-card:not(:last-child) {
-    margin-bottom: 0px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .socialnet-card {
     width: 270px;
-    height: 428px;
+    height: 100%;
   }
 }
 .socialnet-card .socialnet {
@@ -1173,6 +1166,25 @@ img {
 }
 .socialnet-card .socialnet__logo {
   color: currentColor;
+}
+
+@media screen and (min-width: 480px) {
+  .socialnet-img {
+    width: 450px;
+    height: 460px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .socialnet-img {
+    width: 354px;
+    height: 374px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .socialnet-img {
+    width: 270px;
+    height: 260px;
+  }
 }
 
 /* --- секція 4 --- */
@@ -1263,13 +1275,13 @@ img {
 }
 @media screen and (min-width: 480px) {
   .modal-window {
-    min-width: 450px;
+    width: 450px;
     min-height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal-window {
-    min-width: 528px;
+    width: 528px;
     min-height: 581px;
   }
 }
@@ -1319,10 +1331,19 @@ img {
 .modal-window__name {
   display: block;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 480px) {
+  .modal-window__name {
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-window__name {
+    line-height: 1.15;
+  }
 }
 
 /* --- Форма модального вікна --- */
@@ -1419,12 +1440,12 @@ img {
 }
 .modal-form__input {
   display: block;
-  width: 100%;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 14px 16px 14px 42px;
   outline: none;
+  width: 100%;
   -webkit-transition-property: border-color;
   transition-property: border-color;
   -webkit-transition-duration: 250ms;
@@ -1570,7 +1591,7 @@ img {
   display: flex;
   gap: 8px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .filtr {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1712,7 +1733,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .products-box__thumb {
-    width: 450px;
+    width: 100%;
     height: 294px;
   }
 }
@@ -1750,7 +1771,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .products-box__text {
-    width: 450px;
+    width: 100%;
     padding: 77px 24px;
   }
 }
@@ -1790,6 +1811,12 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+  .products-img {
+    width: auto;
+  }
 }
 
 .footer {

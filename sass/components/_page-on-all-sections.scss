@@ -52,7 +52,7 @@
 }
 .position-list {
     
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: flex;
         gap: 30px;
         flex-wrap: wrap;

@@ -60,7 +60,7 @@
             overflow: hidden;
 
             @media screen and (min-width: $mobile) {
-                width: 450px;
+                width: 100%;
                 height: 294px;
             }
             @media screen and (min-width: $tablet) {
@@ -88,7 +88,7 @@
             transition-timing-function: $transition-bezier;
 
             @media screen and (min-width: $mobile) {
-                width: 450px;
+                width: 100%;
                 padding: 77px 24px;
             }
             @media screen and (min-width: $tablet) {
@@ -124,5 +124,11 @@
             letter-spacing: 0.03em;
             color: $secondary-color-text;
         }
-    } 
+    }
+}
+.products-img {
+   
+    @media screen and (min-width: $tablet) {
+        width: auto;   
+    }
 }

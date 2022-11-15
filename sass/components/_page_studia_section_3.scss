@@ -4,23 +4,17 @@
     border-radius: 0 0 4px 4px;
     box-shadow: $shadow-card-solid;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         width: 450px;
-        height: 622px;
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
+        height: 100%;
     }
     @media screen and (min-width: $tablet) {
         width: 354px;
-        height: 536px;
-        &:not(:last-child) {
-        margin-bottom: 0px;
-        }
+        height: 100%;
     }
     @media screen and (min-width: $desktop) {
         width: 270px;
-        height: 428px;
+        height: 100%;
     }
     
 
@@ -74,4 +68,18 @@
             color: currentColor;
         } 
     }
+}
+.socialnet-img {
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+        height: 460px;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+        height: 374px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+        height: 260px;
+    } 
 }
