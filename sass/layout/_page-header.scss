@@ -306,10 +306,18 @@
 }
 
 .menu.is-open .menu-social {
-    display: flex;
+    @media screen and (max-width: $mobile) {
+        display: block;
+    }
+    @media screen and (min-width: $mobile) {
+        display: flex;
+    }
 }
 .menu-social {
-    @media screen and (min-width: $mobile), (max-width: $mobile) {
+    @media screen and (max-width: $mobile) {
+        display: block;
+    }
+    @media screen and (min-width: $mobile) {
         display: block;
     }
     @media screen and (min-width: $tablet) {
@@ -318,9 +326,14 @@
 }
 
 .menu .menu-social__item:not(:last-child) {
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 10px;
+        }
+    @media screen and (min-width: $mobile) {
     margin-right: 10px;
     padding-right: 10px;
     border-right: 1px solid $input-modal;
+    }
 }
 .menu .menu-social__link {
     color: $primary-color-text;
