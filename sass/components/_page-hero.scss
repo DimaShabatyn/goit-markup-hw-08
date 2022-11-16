@@ -1,24 +1,52 @@
 /* --- герой --- */
 .hero-overlay {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: 
-    linear-gradient(to right, $overlay-color, $overlay-color),
-    url(../images/hero.jpg);
-    background-color: $hero-bg;
-    background-size: cover;
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
+        min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: 
+        linear-gradient(to right, $overlay-color, $overlay-color),
+        url(../images/hero-mobile.jpg);
+        background-color: $hero-bg;
+        background-size: cover;    
+    }
+    @media screen and (min-width: $tablet) {
+        min-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: 
+        linear-gradient(to right, $overlay-color, $overlay-color),
+        url(../../images/hero-tablet.jpg);
+        background-color: $hero-bg;
+        background-size: cover;    
+    }
+    @media screen and (min-width: $desktop) {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: 
+        linear-gradient(to right, $overlay-color, $overlay-color),
+        url(../images/hero.jpg);
+        background-color: $hero-bg;
+        background-size: cover;    
+    }
+    
 }
 .hero {
     margin: 0 auto;
     text-align: center;
-    padding: 200px 15px;
 
-    @media screen and (min-width: $mobile) {
-        max-width: 390px;
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
+        width: 390px;
+        padding: 118px 15px;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 390px;
+        padding: 118px 15px;
     }
     @media screen and (min-width: $desktop) {
-        max-width: 696px;
+        width: 696px;
+        padding: 200px 15px;
     }
 
     &-title {

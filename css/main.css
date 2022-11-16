@@ -873,29 +873,60 @@ img {
 }
 
 /* --- герой --- */
-.hero-overlay {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  background-color: #C4C4C4;
-  background-size: cover;
+@media screen and (min-width: 480px), (max-width: 480px) {
+  .hero-overlay {
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-mobile.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
+    background-color: #C4C4C4;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-overlay {
+    min-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-tablet.jpg);
+    background-color: #C4C4C4;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-color: #C4C4C4;
+    background-size: cover;
+  }
 }
 
 .hero {
   margin: 0 auto;
   text-align: center;
-  padding: 200px 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .hero {
-    max-width: 390px;
+    width: 390px;
+    padding: 118px 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 390px;
+    padding: 118px 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 696px;
+    width: 696px;
+    padding: 200px 15px;
   }
 }
 .hero-title {
@@ -1166,25 +1197,6 @@ img {
 }
 .socialnet-card .socialnet__logo {
   color: currentColor;
-}
-
-@media screen and (min-width: 480px) {
-  .socialnet-img {
-    width: 450px;
-    height: 460px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .socialnet-img {
-    width: 354px;
-    height: 374px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .socialnet-img {
-    width: 270px;
-    height: 260px;
-  }
 }
 
 /* --- секція 4 --- */
@@ -1740,7 +1752,7 @@ img {
 @media screen and (min-width: 768px) {
   .products-box__thumb {
     width: 354px;
-    height: 294px;
+    height: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1758,8 +1770,8 @@ img {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #FFFFFF;
-  -webkit-transform: translateY(101%);
-          transform: translateY(101%);
+  -webkit-transform: translateY(120%);
+          transform: translateY(120%);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -1769,7 +1781,7 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px), (max-width: 480px) {
   .products-box__text {
     width: 100%;
     padding: 77px 24px;
@@ -1815,7 +1827,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .products-img {
-    width: auto;
+    width: 100%;
+    height: auto;
   }
 }
 

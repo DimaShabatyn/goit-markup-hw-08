@@ -69,17 +69,14 @@
         } 
     }
 }
-.socialnet-img {
-    @media screen and (min-width: $mobile) {
-        width: 450px;
-        height: 460px;
-    }
-    @media screen and (min-width: $tablet) {
-        width: 354px;
-        height: 374px;
-    }
-    @media screen and (min-width: $desktop) {
-        width: 270px;
-        height: 260px;
-    } 
-}
+// .socialnet-img {
+//     @media screen and (min-width: $mobile) {
+//         width: 450px;
+//     }
+//     @media screen and (min-width: $tablet) {
+//         width: 354px;
+//     }
+//     @media screen and (min-width: $desktop) {
+//         width: 270px;
+//     } 
+// }
