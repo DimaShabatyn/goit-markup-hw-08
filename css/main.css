@@ -944,7 +944,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 696px;
+    min-width: 696px;
     padding: 200px 15px;
   }
 }
