@@ -11,7 +11,7 @@
 }
 
 .header-container {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: flex;
         align-items: center;
         justify-content: space-between; 
@@ -29,7 +29,7 @@
     
 }
 .menu {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         font-weight: 500;
         letter-spacing: .02em;
     }
@@ -41,7 +41,7 @@
     }
 }
 .nav {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: none;
     }
     @media screen and (min-width: $tablet) {
@@ -51,7 +51,7 @@
 
 
 .menu.is-open {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         position: fixed;
         z-index: 1;
         top: 0;
@@ -68,12 +68,12 @@
     }
 }
 .menu.is-open .nav {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
     }
 }
 .menu.is-open .menu-contacts {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
     }
 }
@@ -91,7 +91,7 @@
     line-height: 1.17;
     letter-spacing: .02em;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
         margin-bottom: 32px;
     }
@@ -115,22 +115,22 @@
     fill: $main-color-text;
 }
 .menu__button .icon-close {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
     } 
 }
 .menu__button .icon-menu {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: none;
     } 
 }
 .menu__button.is-open .icon-close {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: none;
     }
 }
 .menu__button.is-open .icon-menu {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
     }
 }
@@ -151,7 +151,7 @@
     letter-spacing: 0.03em;
     color: $logo-color-text;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         padding: 16px 0;
     }
 
@@ -161,7 +161,7 @@
 }
 
 .site-nav {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
     }
     @media screen and (min-width: $tablet) {
@@ -175,7 +175,7 @@
     position: relative;
 }
 .site-nav__link {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         font-style: normal;
         font-weight: 500;
         font-size: 40px;
@@ -233,7 +233,7 @@
     
 }
 .site-nav__item:not(:last-child) {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         margin-bottom: 32px; 
     }
     @media screen and (min-width: $tablet) {
@@ -243,7 +243,7 @@
 }
 .menu-contacts {
     
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: none;
     }
     @media screen and (min-width: $tablet) {
@@ -297,7 +297,7 @@
     transition-duration: $time-250;
     transition-timing-function: $transition-bezier;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: none;
     }
     @media screen and (min-width: $tablet) {
@@ -309,7 +309,7 @@
     display: flex;
 }
 .menu-social {
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
     }
     @media screen and (min-width: $tablet) {
@@ -336,7 +336,7 @@
     border: none;
     fill: $main-color-text;
 
-    @media screen and (min-width: $mobile) {
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: flex;
     }
     @media screen and (min-width: $tablet) {
