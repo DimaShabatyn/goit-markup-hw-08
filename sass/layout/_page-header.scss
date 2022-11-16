@@ -90,7 +90,8 @@
     font-size: 34px;
     line-height: 1.17;
     letter-spacing: .02em;
-
+    width: 300px;
+    
     @media screen and (min-width: $mobile), (max-width: $mobile) {
         display: block;
         margin-bottom: 32px;
@@ -307,7 +308,9 @@
 
 .menu.is-open .menu-social {
     @media screen and (max-width: $mobile) {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
     }
     @media screen and (min-width: $mobile) {
         display: flex;
@@ -326,14 +329,14 @@
 }
 
 .menu .menu-social__item:not(:last-child) {
-    @media screen and (max-width: $mobile) {
-        margin-bottom: 10px;
-        }
-    @media screen and (min-width: $mobile) {
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px solid $input-modal;
-    }
+    // @media screen and (max-width: $mobile) {
+    //     margin-bottom: 10px;
+    // }
+    // @media screen and (min-width: $mobile) {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid $input-modal;
+    // }
 }
 .menu .menu-social__link {
     color: $primary-color-text;
