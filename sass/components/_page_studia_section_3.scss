@@ -69,14 +69,9 @@
         } 
     }
 }
-// .socialnet-img {
-//     @media screen and (min-width: $mobile) {
-//         width: 450px;
-//     }
-//     @media screen and (min-width: $tablet) {
-//         width: 354px;
-//     }
-//     @media screen and (min-width: $desktop) {
-//         width: 270px;
-//     } 
-// }
+.img-thumb {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
