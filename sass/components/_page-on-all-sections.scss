@@ -46,9 +46,15 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $main-color-text;
-    margin-bottom: 50px;
     margin-top: 0;
     padding: 0;
+
+    @media screen and (min-width: $mobile), (max-width: $mobile) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
 .position-list {
     
@@ -67,7 +73,7 @@
     @media screen and (min-width: $desktop) {
         display: flex;
         gap: 30px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
     }
 }

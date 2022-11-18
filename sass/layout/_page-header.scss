@@ -87,14 +87,19 @@
 
 .menu.is-open .contacts__item:last-child .contacts__link {
     color: $primary-color-text;
-    font-size: 34px;
     line-height: 1.17;
     letter-spacing: .02em;
     width: 300px;
     
-    @media screen and (min-width: $mobile), (max-width: $mobile) {
+    @media screen and (max-width: 340px) {
         display: block;
         margin-bottom: 32px;
+        font-size: 28px;
+    }
+    @media screen and (min-width: $mobile), (min-width: 341px) {
+        display: block;
+        margin-bottom: 32px;
+        font-size: 34px;
     }
     @media screen and (min-width: $tablet) {
         display: inline;

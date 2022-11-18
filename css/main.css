@@ -360,9 +360,18 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
   margin-top: 0;
   padding: 0;
+}
+@media screen and (min-width: 480px), (max-width: 480px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (min-width: 480px), (max-width: 480px) {
@@ -397,8 +406,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     gap: 30px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -561,15 +570,22 @@ img {
 }
 .menu.is-open .contacts__item:last-child .contacts__link {
   color: #2196F3;
-  font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   width: 300px;
 }
-@media screen and (min-width: 480px), (max-width: 480px) {
+@media screen and (max-width: 340px) {
   .menu.is-open .contacts__item:last-child .contacts__link {
     display: block;
     margin-bottom: 32px;
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 480px), (min-width: 341px) {
+  .menu.is-open .contacts__item:last-child .contacts__link {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 34px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1156,6 +1172,13 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.picture-thumb {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 /* --- секція 3 --- */
