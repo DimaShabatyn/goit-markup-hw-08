@@ -1362,7 +1362,7 @@ img {
 @media screen and (max-width: 479px) {
   .modal-window {
     width: 300px;
-    min-height: 609px;
+    min-height: 570px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -1422,13 +1422,19 @@ img {
 /* --- Заголовок модального вікна --- */
 .modal-window__name {
   display: block;
-  font-size: 20px;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (max-width: 479px) {
+  .modal-window__name {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 @media screen and (min-width: 480px) {
   .modal-window__name {
+    font-size: 20px;
     line-height: 1.5;
   }
 }

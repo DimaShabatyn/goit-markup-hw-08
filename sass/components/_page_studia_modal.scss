@@ -37,7 +37,7 @@
 
     @media screen and (max-width: 479px) {
         width: 300px;
-        min-height: 609px;
+        min-height: 570px;
     }
     @media screen and (min-width: $mobile) {
         width: 450px;
@@ -86,12 +86,16 @@
 /* --- Заголовок модального вікна --- */
 .modal-window__name {
     display: block;
-    font-size: 20px;
     text-align: center;
     letter-spacing: 0.03em;
     color: $main-color-text;
 
+    @media screen and (max-width: 479px) {
+        font-size: 16px;
+        line-height: 1.5;
+    }
     @media screen and (min-width: $mobile) {
+        font-size: 20px;
         line-height: 1.5;
     }
     @media screen and (min-width: $desktop) {
