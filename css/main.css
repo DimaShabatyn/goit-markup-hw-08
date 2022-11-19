@@ -906,6 +906,32 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .contacts__icon.envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon.envelope {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon.smartphone {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon.smartphone {
+    width: 10px;
+    height: 16px;
+  }
+}
+
 /* --- герой --- */
 @media screen and (min-width: 480px), (max-width: 480px) {
   .hero-overlay {
